@@ -1,9 +1,13 @@
-CC = g++
-CPPFLAGS = -O2 -W -Wall
-LDLIBS = -lopencv_core -lopencv_highgui -lopencv_imgproc 
+#Variables
+CC= g++
+CPPFLAGS= -O2 -W -c -Wall
 
-BIN = ImageIOpfm
-all: $(BIN)
+pfmLib.a: ImageIOpfm.o
+	ar rcs pfmLib.a ImageIOpfm.o
+
+ImageIOpfm.o: ImageIOpfm.cpp 
+	$(CC) $(CPPFLAGS) ImageIOpfm.cpp
+
 
 clean:
-	rm -f $(BIN) *.o core*
+	rm -f $(BIN) *.o core* *.a

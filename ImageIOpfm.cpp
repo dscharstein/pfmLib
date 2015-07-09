@@ -220,7 +220,7 @@ int WriteFilePFM(const Mat &im, string path, float scalef=1/255.0){
     return 0;
 }
 
-
+/*
 int main(int argc, char ** argv){
     Mat I, M;
 
@@ -245,5 +245,6 @@ int main(int argc, char ** argv){
     waitKey(0);
     return 0;
 }
+*/
 
  
